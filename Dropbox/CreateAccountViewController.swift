@@ -9,18 +9,47 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
+    
+    @IBOutlet weak var create: UIBarButtonItem!
+    
 
+
+    
+    //   @IBOutlet weak var passwordStrength: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    //   create.enabled=false
+        
+    //    passwordStrength.alpha = 0
+     //     passwordStrength="Weak"
         // Do any additional setup after loading the view.
 
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+  
+    
+    
+    
+    @IBAction func password(sender: AnyObject) {
+        create.enabled=true
+        
+        /*
+        passwordStrength.alpha = 1
+        if passwordField.text.utf16Count < 2
+        {passwordStrength = "Weak"}
+    */
+        
+    }
+    
     
     
     @IBAction func backToWelcome(sender: AnyObject) {

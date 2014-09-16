@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBAction func swipeLeft(sender: UISwipeGestureRecognizer) {
+        println("swiped")
+        performSegueWithIdentifier("swipeSegue2", sender: self)
+    }
+    
+    
+    @IBAction func swipeLeft2(sender: UISwipeGestureRecognizer) {
+        performSegueWithIdentifier("swipeSegue2", sender: self)
+    }
+
     override func viewDidLoad() {
+       
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+         println("loaded")
+              // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+  
+    
+    
+   
 }
 
